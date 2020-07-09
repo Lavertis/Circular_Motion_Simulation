@@ -1,6 +1,5 @@
-import math
-
 import pygame
+import math
 
 
 class Circle:
@@ -28,7 +27,3 @@ class Circle:
 
     def change_radius_line_thickness(self, value):
         self.radius_line_thickness = int(value)
-
-
-def create_circle(surface, surface_width, surface_height):
-    return Circle(surface=surface, surface_width=surface_width, surface_height=surface_height)

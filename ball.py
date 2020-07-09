@@ -26,7 +26,3 @@ class Ball:
     def change_colour(self, value):
         self.colour = pygame.color.Color(self.colours[int(value) - 1])
         self.colour_name = self.colours[int(value) - 1]
-
-
-def create_ball(surface):
-    return Ball(surface=surface)

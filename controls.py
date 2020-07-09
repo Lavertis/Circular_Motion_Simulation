@@ -1,4 +1,4 @@
-from tkinter import Tk, Label, Scale, HORIZONTAL
+from tkinter import *
 
 
 class Controls:

@@ -1,5 +1,3 @@
-from tkinter import TclError
-
 from draw import draw
 from world import *
 

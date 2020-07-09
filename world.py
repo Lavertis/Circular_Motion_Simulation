@@ -7,7 +7,7 @@ from controls import *
 class World(Controls):
     def __init__(self):
         super().__init__()
-        # Pygame window
+        # PyGame window
         pygame.init()
         pygame.display.set_caption("Circular motion")
         self.surface_height = round(0.75 * self.window.winfo_screenheight())
@@ -19,8 +19,8 @@ class World(Controls):
         self.fps_font = pygame.font.SysFont('Comic Sans MS', 10)
         self.loop = True
         self.frequency_font = pygame.font.SysFont('Comic Sans MS', 30)
-        self.ball = create_ball(self.screen)
-        self.circle = create_circle(self.screen, self.surface_width, self.surface_height)
+        self.ball = Ball(self.screen)
+        self.circle = Circle(self.screen, self.surface_width, self.surface_height)
         self.initialize_fps_counter()
         # Controls window
         set_controls_commands(self)

@@ -1,6 +1,5 @@
-import math
-
 import pygame
+import math
 
 
 def check_for_exit_and_window_resize(world):
