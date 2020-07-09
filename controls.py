@@ -33,7 +33,7 @@ class Controls:
 
     def set_window(self):
         window_size = str(round(self.window.winfo_screenwidth() * 0.18)) + 'x' + str(
-            round(self.window.winfo_screenheight() * 0.77)) + '+' + str(
+            round(self.window.winfo_screenheight() * 0.6)) + '+' + str(
             round(self.window.winfo_screenwidth() * 0.75)) + '+' + str(
             round(self.window.winfo_screenheight() * 0.096))
         self.window.geometry(window_size)
@@ -83,3 +83,21 @@ class Controls:
         self.circle_radius_colour_scale.pack()
         self.circle_radius_thickness_label.pack()
         self.circle_radius_thickness_scale.pack()
+
+
+def set_controls_commands(world):
+    world.ball_velocity_scale.config(command=world.ball.change_velocity)
+    world.ball_radius_scale.config(command=world.ball.change_radius)
+    world.circle_colour_scale.config(command=world.ball.change_colour)
+    world.circle_radius_scale.config(command=world.circle.change_radius)
+    world.circle_radius_colour_scale.config(command=world.circle.change_radius_line_colour)
+    world.circle_radius_thickness_scale.config(command=world.circle.change_radius_line_thickness)
+
+
+def set_controls_defaults(world):
+    world.ball_velocity_scale.set(world.ball.velocity)
+    world.ball_radius_scale.set(world.ball.radius)
+    world.circle_colour_scale.set(world.ball.colours.index(world.ball.colour_name) + 1)
+    world.circle_radius_scale.set(world.circle.radius)
+    world.circle_radius_colour_scale.set(world.circle.colours.index(world.circle.colour_name) + 1)
+    world.circle_radius_thickness_scale.set(world.circle.radius_line_thickness)

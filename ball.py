@@ -17,7 +17,7 @@ class Ball:
             self.position.x - self.radius, self.position.y - self.radius, self.diameter, self.diameter))
 
     def change_velocity(self, value):
-        self.velocity = float(value)
+        self.velocity = value
 
     def change_radius(self, value):
         self.radius = int(value)
@@ -26,3 +26,7 @@ class Ball:
     def change_colour(self, value):
         self.colour = pygame.color.Color(self.colours[int(value) - 1])
         self.colour_name = self.colours[int(value) - 1]
+
+
+def create_ball(surface):
+    return Ball(surface=surface)

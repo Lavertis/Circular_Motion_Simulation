@@ -1,14 +1,15 @@
 from tkinter import TclError
 
+from draw import draw
 from world import *
 
 world = World()
 
 while world.loop:
-    world.check_for_exit_and_window_resize()
+    check_for_exit_and_window_resize(world)
     try:
-        world.move_ball()
-        world.draw()
+        draw(world)
+        move_ball(world)
         world.window.update()
     except TclError:
         break
