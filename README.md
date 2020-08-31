@@ -1,4 +1,4 @@
-# Circular_Motion
-Circular motion simulation project for my physics classes
+# Circular motion
+Circular motion simulation project for my physics classes.
 
 ![](src/Video.gif)
